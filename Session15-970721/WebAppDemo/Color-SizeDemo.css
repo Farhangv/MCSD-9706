@@ -1,0 +1,16 @@
+﻿body {
+    direction:rtl;
+    background-color:#666;
+}
+#first{
+    background-color: red;
+}
+
+#second {
+    /*background-color: #F5D;*/
+    background-color: #f934cd;
+}
+#third {
+    /*background-color: rgb(180,180,180);*/
+    background-color: rgba(50,50,200,0.6);
+}   
