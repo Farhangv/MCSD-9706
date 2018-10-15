@@ -1,0 +1,50 @@
+﻿body {
+    direction:rtl;
+    margin:0;
+    min-height:3000px;
+}
+div {
+    width:150px;
+    height:150px;
+    border:1px solid #000;
+
+}
+#First{
+    top:50px;
+    right:50px;
+    position:relative;
+}
+#Second{
+    top:200px;
+    right:200px;
+    position:relative;
+}
+/*
+#Third {
+    top: 50px;
+    right: 50px;
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+    */
+#Third {
+    width: 650px;
+    height: 450px;
+    position:relative;
+}
+
+#Fourth{
+    top:200px;
+    right:200px;
+    position:static;
+    width:250px;
+    
+}
+#Fifth{
+    top:50px;
+    left:50px;
+    width:50px;
+    height:50px;
+    position:absolute;
+}

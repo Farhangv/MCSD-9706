@@ -1,0 +1,15 @@
+﻿body {
+    direction:rtl;
+    margin:0;
+}
+#border-radius{
+    border:1px solid #000;
+    width:250px;
+    height:250px;
+    border-radius:5px;
+}
+#size-box {
+    border: 1px solid #000;
+    width: 100%;
+    height: 100%;
+}

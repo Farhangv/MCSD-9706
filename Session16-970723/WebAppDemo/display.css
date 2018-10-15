@@ -1,0 +1,23 @@
+﻿body {
+    direction:rtl;
+}
+div{
+    width:150px;
+    height:150px;
+    border:2px solid #0094ff;
+}
+.none-display{
+    display:none;
+}
+.block-display{
+    display:block;
+}
+.inline-display{
+    display:inline;
+}
+.inline-block-display{
+    display:inline-block;
+}
+span {
+    border: 2px solid #0094ff;
+}

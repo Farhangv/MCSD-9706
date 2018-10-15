@@ -1,0 +1,28 @@
+﻿@import url('../fonts/vazir.css');
+body {
+    direction:rtl;
+    font-size:15px;
+}
+p{
+    width:300px;
+    border:1px solid #808080;
+    padding:15px;
+    margin:20px auto;
+    border-radius:8px;
+}
+p:first-child{
+    font-size:18px;
+    font-weight:lighter;
+}
+p:nth-child(2)
+{
+    font-size:1.4em;
+}
+p:nth-child(3)
+{
+    font-family:Tahoma;
+}
+p:nth-child(4)
+{
+    font-family:Vazir;
+}

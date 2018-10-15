@@ -1,0 +1,27 @@
+﻿body {
+    direction:rtl;
+}
+div{
+    border:1px solid #ff6a00;
+    min-height:20px;
+}
+.sidebar{
+    min-height:300px;
+    width:25%;
+    float:right;
+    clear:right;
+}
+.main{
+    min-height:300px;
+    width:60%;
+    float:right;
+}
+.header{
+    float:right;
+    min-height:150px;
+    width:85%;
+}
+.footer{
+    clear:both;
+    width:85%;
+}
