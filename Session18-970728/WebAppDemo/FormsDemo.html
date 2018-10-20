@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/main.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <form action="formAction.aspx" method="get">
+                <label for="name">اسم</label>
+                <input id="name" name="name" type="text" placeholder="نام" value="محمد" />
+                <span>فامیل</span>
+                <input name="family" type="text" placeholder="نام خانوادگی" value="اعظمی" />
+                <input name="age" type="number" placeholder="سن" />
+                <input name="email" type="email" placeholder="ایمیل" />
+                <input name="site" type="url" />
+                <label>
+                    مرا به خاطر داشته باش
+                    <input name="rememberMe" type="checkbox" checked value="remember" />
+                </label>
+                <label for="female">خانم</label>
+                <input id="female" name="gender" type="radio"  value="female"/>
+                <label for="male">آقا</label>
+                <input id="male" name="gender" type="radio" checked value="male"/>
+                <br />
+
+                <input type="submit" value="ثبت" />
+                <input type="reset" value="پاک کردن فرم" />
+                <input type="button" value="دکمه" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>

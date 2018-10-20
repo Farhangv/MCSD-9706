@@ -1,0 +1,8 @@
+﻿body {
+    direction:rtl;
+}
+[class|=col]{
+    border:1px solid #999;
+    min-height:100px !important;
+    background-color:#ccc;
+}
