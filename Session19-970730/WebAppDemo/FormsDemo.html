@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/main.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <!--<form action="formAction.aspx" method="post" enctype="multipart/form-data">-->
+            <form action="formAction.aspx" method="post" class="form-horizontal">
+
+                <div class="form-group">
+                    <label for="name" class="col-md-2 control-label">اسم</label>
+                    <div class="col-md-10">
+                        <input class="form-control" id="name" name="name" type="text" placeholder="نام" value="محمد" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="family" class="col-md-2 control-label">نام خانوادگی</label>
+                    <div class="col-md-10">
+                        <input class="form-control" id="family" name="family" type="text" placeholder="نام خانوادگی" value="اعظمی" readonly />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="age" class="col-md-2 control-label">سن</label>
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <span class="input-group-addon">سن را وارد کنید</span>
+                            <input id="age" class="form-control" name="age" type="number" placeholder="سن" />
+                            <span class="input-group-addon">تست</span>
+                            <span class="input-group-addon">سال</span>
+                        </div>
+                    </div>
+                    <label for="email" class="col-md-2 control-label">ایمیل</label>
+                    <div class="col-md-4">
+                        <input id="email" class="form-control" name="email" type="email" placeholder="ایمیل" />
+                    </div>
+                </div>
+                <input name="site" type="url" />
+                <label>
+                    مرا به خاطر داشته باش
+                    <input name="rememberMe" type="checkbox" checked value="remember" />
+                </label>
+                <label for="female">خانم</label>
+                <input id="female" name="gender" type="radio" value="female" />
+                <label for="male">آقا</label>
+                <input id="male" name="gender" type="radio" checked value="male" />
+                <br />
+                <input type="password" name="pass" />
+                <input type="hidden" name="id" value="10" />
+                <div class="form-group">
+                    <label for="description" class="col-md-2 control-label">توضیحات</label>
+                    <div class="col-md-10">
+                        <textarea id="description" class="form-control" name="description" style="min-height:200px;"></textarea>
+                    </div>
+                </div>
+                <select name="job" multiple>
+                    <option value="1">مهندس نرم افزار</option>
+                    <option value="2">مهندس مکانیک</option>
+                    <option value="3">مهندس برق</option>
+                </select>
+                <input type="file" name="photo" />
+
+
+                <input type="submit" value="ثبت" />
+                <input type="reset" value="پاک کردن فرم" />
+                <input type="button" value="دکمه" />
+            </form>
+        </div>
+        &lt;div&gt;
+        &copy;
+        &lt;/div&gt;
+    </div>
+</body>
+</html>
