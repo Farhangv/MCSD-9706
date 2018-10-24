@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        function sampleFunction(x, y, z) {
+            if (typeof x !== 'undefined') {
+                console.log('X Has Value');
+                return 'Has Result';
+            }
+            if (typeof y !== 'undefined') {
+                console.log('Y Has Value');
+                return;
+            }
+
+
+
+        }
+
+        var result = sampleFunction();
+        console.log(typeof result);
+        result = sampleFunction(10);
+        console.log(typeof result);
+        sampleFunction(10, 20);
+        sampleFunction(10, 20, 30);
+    </script>
+</body>
+</html>

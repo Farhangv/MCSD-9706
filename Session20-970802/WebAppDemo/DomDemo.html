@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/main.css" rel="stylesheet" />
+</head>
+<body class="dom-demo">
+
+    <main class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <input type="text" id="name" class="form-control" 
+                       placeholder="نام کاربر" />
+            </div>
+            <div class="col-md-2">
+                <button type="button"
+                        id="welcome-btn"
+                        class="btn btn-success btn-sm btn-block" >
+                    <span class="fa fa-user"></span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="jumbotron" id="welcome-message"></div>
+        </div>
+    </main>
+
+
+    <script>
+
+        (function () { 
+            document.getElementById('welcome-btn').addEventListener('click', writeWelcomeMessage);
+            document.getElementById('name').addEventListener('input', writeWelcomeMessage);
+
+            var welcome_div = document.getElementById('welcome-message');
+            console.log(welcome_div.className);
+            welcome_div.className = welcome_div.className + ' text-center';
+            console.log(welcome_div.className);
+
+            function writeWelcomeMessage() {
+
+                var input_name = document.getElementById('name').value;
+                welcome_div.innerHTML = `<h2>${input_name} به جاوا اسکریپت خوش آمدید!</h2>`;
+                //welcome_div.innerText = '<h2>به جاوا اسکریپت خوش آمدید!</h2>';
+            }
+        })();
+    </script>
+</body>
+</html>

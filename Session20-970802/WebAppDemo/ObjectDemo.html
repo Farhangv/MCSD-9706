@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <script>
+        var person = new Object();
+        person.name = "John";
+        person.family = "Doe";
+        person.age = 30;
+        person.introduceMe = function () {
+            console.log(`My name is ${this.name} ${this.family} I'm ${this.age} years old!`);
+        };
+        person.introduceMe();
+
+        //Java Script Object Notaion / JSON
+
+        var personJson = {
+            name: "John",
+            family : "Doe",
+            age :30,
+            introduceMe :function () {
+                console.log(`My name is ${this.name} ${this.family} I'm ${this.age} years old!`);
+            }
+        };
+        personJson.introduceMe();
+
+        //Constructor
+        function Person() {
+            this.name = '';
+            this.family = '';
+            this.age = 0;
+            this.introduceMe = function () {
+                console.log(`My name is ${this.name} ${this.family} I'm ${this.age} years old!`);
+            };
+
+            console.log('Person Called!');
+        }
+
+        Person();
+        var anotherPerson = new Person();
+        anotherPerson.name = "John";
+        anotherPerson.family = "Doe";
+        anotherPerson.age = 30;
+        anotherPerson.introduceMe();
+
+    </script>
+</body>
+</html>
