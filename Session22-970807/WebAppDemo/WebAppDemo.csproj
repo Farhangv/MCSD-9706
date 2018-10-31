@@ -139,6 +139,7 @@
     <Content Include="Scripts\test.js" />
     <Content Include="SeatsDemo.html" />
     <Content Include="TasksDemo.html" />
+    <Content Include="UsersData\TextFile1.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -161,9 +162,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UsersData\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
