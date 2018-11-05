@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{675326D2-08F4-46FB-85D0-13EC60739B5F}</ProjectGuid>
+    <ProjectGuid>{CC27DA62-61DF-4D2F-852F-847929E89F86}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebAppDemo</RootNamespace>
-    <AssemblyName>WebAppDemo</AssemblyName>
+    <RootNamespace>MVCDemo</RootNamespace>
+    <AssemblyName>MVCDemo</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -62,100 +62,58 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AddUser.aspx" />
-    <Content Include="AjaxDemo.html" />
-    <Content Include="Content\bootstrap-rtl.css" />
-    <Content Include="Content\bootstrap-rtl.min.css" />
-    <Content Include="Content\bootstrap-theme-rtl.css" />
-    <Content Include="Content\bootstrap-theme-rtl.min.css" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\font-awesome.css" />
-    <Content Include="Content\font-awesome.min.css" />
-    <Content Include="Content\main.css" />
-    <Content Include="Content\MdBootstrapPersianDateTimePicker\jquery.Bootstrap-PersianDateTimePicker.css" />
-    <Content Include="fonts\fontawesome-webfont.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="fonts\Vazir-Black.eot" />
-    <Content Include="fonts\Vazir-Black.ttf" />
-    <Content Include="fonts\Vazir-Black.woff" />
-    <Content Include="fonts\Vazir-Black.woff2" />
-    <Content Include="fonts\Vazir-Bold.eot" />
-    <Content Include="fonts\Vazir-Bold.ttf" />
-    <Content Include="fonts\Vazir-Bold.woff" />
-    <Content Include="fonts\Vazir-Bold.woff2" />
-    <Content Include="fonts\Vazir-Light.eot" />
-    <Content Include="fonts\Vazir-Light.ttf" />
-    <Content Include="fonts\Vazir-Light.woff" />
-    <Content Include="fonts\Vazir-Light.woff2" />
-    <Content Include="fonts\Vazir-Medium.eot" />
-    <Content Include="fonts\Vazir-Medium.ttf" />
-    <Content Include="fonts\Vazir-Medium.woff" />
-    <Content Include="fonts\Vazir-Medium.woff2" />
-    <Content Include="fonts\Vazir-Thin.eot" />
-    <Content Include="fonts\Vazir-Thin.ttf" />
-    <Content Include="fonts\Vazir-Thin.woff" />
-    <Content Include="fonts\Vazir-Thin.woff2" />
-    <Content Include="fonts\vazir.css" />
-    <Content Include="fonts\Vazir.eot" />
-    <Content Include="fonts\Vazir.ttf" />
-    <Content Include="fonts\Vazir.woff" />
-    <Content Include="fonts\Vazir.woff2" />
-    <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="fonts\fontawesome-webfont.woff2" />
-    <Content Include="fonts\fontawesome-webfont.woff" />
-    <Content Include="fonts\fontawesome-webfont.ttf" />
-    <Content Include="fonts\fontawesome-webfont.eot" />
-    <Content Include="Images\ajax-loader.gif" />
-    <Content Include="Images\main-loader.gif" />
-    <Content Include="Images\tennis.jpg" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="DataSets\products.json" />
-    <None Include="Scripts\jquery-2.2.4.intellisense.js" />
-    <Content Include="LastNews.html" />
-    <Content Include="Scripts\ajax-demo.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-2.2.4.js" />
-    <Content Include="Scripts\jquery-2.2.4.min.js" />
-    <Content Include="Scripts\js-demo.js" />
-    <Content Include="Scripts\bootstrap-rtl.js" />
-    <Content Include="Scripts\bootstrap-rtl.min.js" />
-    <Content Include="Scripts\MdBootstrapPersianDateTimePicker\jalaali.js" />
-    <Content Include="Scripts\MdBootstrapPersianDateTimePicker\jquery.Bootstrap-PersianDateTimePicker.js" />
-    <Content Include="Scripts\npm.js" />
-    <Content Include="Scripts\seats-demo.js" />
-    <Content Include="Scripts\tasks-demo.js" />
-    <Content Include="Scripts\test.js" />
-    <Content Include="SeatsDemo.html" />
-    <Content Include="TasksDemo.html" />
+    <Content Include="Global.asax" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddUser.aspx.cs">
-      <DependentUpon>AddUser.aspx</DependentUpon>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DemoController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddUser.aspx.designer.cs">
-      <DependentUpon>AddUser.aspx</DependentUpon>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\web.config" />
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-2.2.4.min.map" />
+    <Content Include="Views\Demo\Sample.cshtml" />
+    <Content Include="Views\Demo\ViewDemo.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -164,7 +122,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="UsersData\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Home\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -179,9 +138,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>9942</DevelopmentServerPort>
+          <DevelopmentServerPort>38219</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:9942/</IISUrl>
+          <IISUrl>http://localhost:38219/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
