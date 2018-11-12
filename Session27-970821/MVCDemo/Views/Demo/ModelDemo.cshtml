@@ -1,0 +1,30 @@
+﻿@using MVCDemo.Models
+@model IEnumerable<Course>
+@{
+    ViewBag.Title = "لیست دوره ها";
+}
+
+<div class="alert alert-@ViewBag.MessageClass">
+    @ViewBag.Message
+</div>
+
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>نام دوره</th>
+            <th>مدت زمان</th>
+            <th>هزینه</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model)
+        {
+        <tr>
+            <td>@course.Title</td>
+            <td>@course.Duration</td>
+            <td>@course.Price</td>
+        </tr>
+        }
+    </tbody>
+</table>
+

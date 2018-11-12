@@ -1,0 +1,9 @@
+﻿@{ 
+    ViewBag.Title = "لیست زبان های برنامه نویسی";
+}
+<ul>
+    @foreach (var name in ((List<string>)ViewBag.Names))
+    {
+        <li>@name</li>
+    }
+</ul>
