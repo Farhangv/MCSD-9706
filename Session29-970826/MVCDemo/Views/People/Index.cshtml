@@ -1,0 +1,24 @@
+﻿@using MVCDemo.Models
+@model IEnumerable<Person>
+@{
+    ViewBag.Title = "لیست افراد";
+}
+
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>نام</th>
+            <th>نام خانوادگی</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var person in Model)
+        {
+        <tr>
+            <td>@person.Name</td>
+            <td>@person.Family</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
