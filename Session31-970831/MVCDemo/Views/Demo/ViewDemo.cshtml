@@ -1,0 +1,26 @@
+﻿@using MVCDemo.Models
+@{
+    var pageTitle = "لیست زبان های برنامه نویسی";
+
+    List<string> names = new List<string>();
+
+    names.Add("C#");
+    names.Add("Java");
+    names.Add("JavaScript");
+    names.Add("TypeScript");
+    names.Add("PHP");
+
+    Person p = new Person();
+}
+<ul>
+    @if (names.Count > 3)
+    {
+        foreach (var item in names)
+        {
+            <li>@item</li>
+        }
+    }
+</ul>
+farhangv@live.com
+@@farhangv
+@(DateTime.Now.Hour <= 7 ? "In Class" : "Class is finished")
