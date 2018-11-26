@@ -1,0 +1,44 @@
+﻿@model IEnumerable<PropMan.Models.PropertyType>
+@{
+    ViewBag.Title = "لیست انواع ملک";
+}
+
+<div class="row">
+    <h2>@ViewBag.Title</h2>
+
+    <a href="@Url.Action("Create")" class="btn btn-success btn-sm pull-left">
+        افزودن نوع ملک جدید
+    </a>
+</div>
+<div class="row">
+    <hr />
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>ردیف</th>
+                <th>نام</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                var row = 1;
+            }
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@(row++)</td>
+                    <td>@item.Name</td>
+                    <td>
+                        <a href="@Url.Action("Edit", "PropertyType", new { id = item.Id })" class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                        </a>
+                        @Html.ActionLink("حذف", "Delete", new { id = item.Id }, new { @class = "btn btn-danger btn-sm" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
