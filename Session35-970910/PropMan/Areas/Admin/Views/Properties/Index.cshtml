@@ -1,0 +1,117 @@
+﻿@model IEnumerable<PropMan.Models.Property>
+
+@{
+    ViewBag.Title = "لیست";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("افزودن", "Create")
+</p>
+<table class="table table-striped table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedUser.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location.Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PropertyType.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Area)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BedRoomsCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValidUntilDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaleUnitPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RentDiposite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RentMonthly)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedUser.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location.Country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PropertyType.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Area)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BedRoomsCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Position)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsActive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValidUntilDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaleUnitPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RentDiposite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RentMonthly)
+        </td>
+        <td>
+            @Html.ActionLink("ویرایش", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("جزییات", "Details", new { id=item.Id }) |
+            @Html.ActionLink("حذف", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
