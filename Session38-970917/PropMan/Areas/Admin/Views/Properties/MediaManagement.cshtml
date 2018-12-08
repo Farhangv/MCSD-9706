@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "مدیریت رسانه ها";
+}
+
+<div class="row">
+    <h2>رسانه ها موجود</h2>
+
+</div>
+<hr/>
+<div class="row">
+    <h2>
+        افزودن رسانه جدید
+    </h2>
+    @using (Html.BeginForm("AddMedia", "Properties", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        <input name="PropertyId" type="hidden" value="@ViewBag.PropertyId" />
+        <div class="form-group">
+            @Html.Label("Media", "فایل", new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBox("Media", null, new { type = "file", @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-sm btn-success pull-left">
+                افزودن فایل
+                <span class="fa fa-upload"></span>
+            </button>
+        </div>
+    }
+</div>
+
+
