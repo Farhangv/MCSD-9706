@@ -258,6 +258,7 @@
     <Compile Include="Models\PropertyType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\PropertyAddMediaViewModel.cs" />
     <Compile Include="ViewModels\PropertyCreateViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
