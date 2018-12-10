@@ -1,0 +1,65 @@
+﻿@model IEnumerable<PropMan.Models.Media>
+@{
+    ViewBag.Title = "مدیریت رسانه ها";
+}
+
+<div class="row">
+    <h2>رسانه ها موجود</h2>
+    @foreach (var media in Model)
+    {
+        @*<img src="data:@media.ContentType;base64,@Convert.ToBase64String(media.FileContent)" />*@
+        <img src="@Url.Action("GetMedia", "Media", new { id = media.Id })" class="property-media-thumb img-thumbnail"/>
+    }
+</div>
+<hr/>
+<div class="row">
+    <h2>
+        افزودن رسانه جدید
+    </h2>
+    <hr/>
+    @using (Html.BeginForm("AddMedia", "Properties", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        <input name="PropertyId" type="hidden" value="@ViewBag.PropertyId" />
+        <div class="form-group">
+            @Html.Label("Media", "فایل", new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                <div class="upload-btn-wrapper">
+                    <button class="btn btn-success btn-sm">
+                        <span class="fa fa-upload"></span>
+                        فایل را انتحاب کنید...
+                    </button>
+                    @Html.TextBox("Media", null, new { type = "file" })
+                </div>
+                @Html.ValidationMessage("Media", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-sm btn-success pull-left">
+                افزودن فایل
+                <span class="fa fa-upload"></span>
+            </button>
+        </div>
+    }
+</div>
+
+@section styles{
+    <style>
+        .upload-btn-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .upload-btn-wrapper input[type=file] {
+            font-size: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+    </style>
+    }
+
+
