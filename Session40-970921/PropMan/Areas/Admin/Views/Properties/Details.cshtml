@@ -1,0 +1,138 @@
+﻿@model PropMan.Models.Property
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Property</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedUser.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedUser.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location.Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location.Country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PropertyType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PropertyType.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Area)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Area)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BedRoomsCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BedRoomsCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Position)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValidUntilDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValidUntilDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleUnitPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleUnitPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RentDiposite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentDiposite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RentMonthly)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentMonthly)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

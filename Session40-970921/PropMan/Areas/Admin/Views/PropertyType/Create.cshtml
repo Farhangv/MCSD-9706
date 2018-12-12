@@ -1,0 +1,36 @@
+﻿@model PropMan.Models.PropertyType
+@{
+    ViewBag.Title = "افزودن نوع ملک جدید";
+}
+
+<div class="row">
+    <h2>@ViewBag.Title</h2>
+</div>
+<hr/>
+<div class="row">
+    @using (Html.BeginForm())
+    {
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "" ,new { @class = "text-danger" })
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            @*@Html.Label("Name", "نام" ,new { @class = "control-label col-md-2" })*@
+            @Html.LabelFor(m => m.Name,new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.TextBox("Name","", new { @class = "form-control farsi-type" })*@
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control farsi-type" })
+                @*@Html.ValidationMessage("Name", new { @class = "text-danger" })*@
+                @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12">
+                <button class="btn btn-success btn-sm pull-left" type="submit">
+                    ذخیره
+                </button>
+            </div>
+        </div>
+    </div>
+    }
+</div>
