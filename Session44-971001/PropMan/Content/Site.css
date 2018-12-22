@@ -1,0 +1,75 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    direction:rtl;
+    font-family:vazir;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top:60px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.property-media-thumb{
+    height:140px;
+    margin:15px;
+    display:block;
+}
+.media-thumbnail-wrapper{
+    float:right;
+    margin:15px;
+    border: 1px solid #ddd;
+    border-radius:5px;
+    padding:15px;
+
+}
+.user-thumbnail{
+    height:80px;
+}
+.property-box {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding-bottom: 15px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    color: #333;
+    height: 300px;
+}
+    .property-box img {
+        width: 100%;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+    .property-box .footer{
+        position:absolute;
+        bottom:15px;
+        right:0;
+        left:0;
+    }
+.property-box h2{
+    font-size:0.99em;
+}
+.property-box-link:hover, .property-box-link:focus{
+    text-decoration: none !important;
+}
+.property-box .price-text{
+    font-size:0.8em;
+}
+.property-box .property-image {
+    height: 160px;
+    background-position: 50% center;
+    background-repeat: no-repeat;
+    background-size: 120%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
