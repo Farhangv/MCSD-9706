@@ -1,0 +1,13 @@
+﻿@model IEnumerable<int>
+@{
+    ViewBag.Title = "صفحه اصلی";
+}
+<div class="row">
+    @foreach (var propertyId in Model)
+    {
+        <div class="col-md-3">
+            @*@Html.Partial("_PropertyBox", property)*@
+            @Html.Action("PropertyBox", "Properties", new { id = propertyId })
+        </div>
+    }
+</div>
