@@ -1,0 +1,69 @@
+﻿@model PropMan.ViewModels.PropertySearchViewModel
+
+@{
+    ViewBag.Title = "جستجو";
+}
+
+<h2>@ViewBag.Title</h2>
+<hr/>
+
+<div class="row">
+    @using (Html.BeginForm("Search", "Properties", FormMethod.Get, new { @class = "form-horizontal search-form" }))
+    {
+        @Html.Hidden("SearchForm", true)
+        <div class="form-group">
+            @Html.LabelFor(m => m.SearchTitle, new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.SearchTitle, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.SearchTitle, "")
+            </div>
+
+            @Html.LabelFor(m => m.SearchAdType, new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @*@Html.EnumDropDownListFor(m => m.SearchAdType, new { @class = "form-control" })*@
+                <select name="SearchAdType" id="SearchAdType" class="form-control">
+                    <option @(Model.SearchAdType == null ? "selected" : "")>انتخاب کنید...</option>
+                    <option value="0" @(Model.SearchAdType == PropMan.Models.AdType.Let ? "selected" : "")>اجاره</option>
+                    <option value="1" @(Model.SearchAdType == PropMan.Models.AdType.Sale ? "selected" : "")>فروش</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.SearchAreaFrom, new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.SearchAreaFrom, new { @class = "form-control", type = "number" })
+                @Html.ValidationMessageFor(m => m.SearchAreaFrom, "")
+            </div>
+
+            @Html.LabelFor(m => m.SearchAreaTo, new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.SearchAreaTo, new { @class = "form-control", type = "number" })
+                @Html.ValidationMessageFor(m => m.SearchAreaTo, "")
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.SearchLocationId, new { @class = "control-label col-md-2" })
+            <div class="col-md-8">
+                @Html.DropDownListFor(m => m.SearchLocationId, null, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.SearchLocationId, "")
+            </div>
+
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary btn-block btn-sm">
+                    <span class="fa fa-search"></span>
+                </button>
+            </div>
+        </div>
+    }
+</div>
+<div class="row">
+    @foreach (var propertyId in Model.PropertyIds)
+    {
+        <div class="col-md-3">
+            @Html.Action("PropertyBox", "Properties", new { id = propertyId })
+        </div>
+        }
+
+</div>
+

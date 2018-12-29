@@ -1,0 +1,13 @@
+﻿@model PropMan.ViewModels.PropertyItemViewModel
+
+<a href="@Url.Action("Details", "Properties", new { id = Model.Id })" class="property-box-link">
+    <div class="property-box">
+        <div class="property-image" style="background-image: url('@Model.PhotoPath');">
+
+        </div>
+        <div class="footer">
+            <h2>@Model.Title</h2>
+            <div class="price-text">@Model.PriceText</div>
+        </div>
+    </div>
+</a>
