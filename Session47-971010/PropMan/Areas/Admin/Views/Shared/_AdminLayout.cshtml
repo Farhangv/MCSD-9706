@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title | مدیریت ملک جو</title>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/bundles/summernotecss")
+    @Styles.Render("~/bundles/PersianDatePickerStyles")
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-theme/0.1.0-beta.10/select2-bootstrap.css" rel="stylesheet"/>
+    @RenderSection("styles", required: false)
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("مدیریت ملک جو", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/Admin/Home/Index"><span class="fa fa-home"></span></a></li>
+                    <li>@Html.ActionLink("انواع ملک", "Index", "PropertyType")</li>
+                    <li>@Html.ActionLink("مدیریت مناطق", "Index", "Locations")</li>
+                    <li>@Html.ActionLink("مدیریت آگهی ها", "Index", "Properties")</li>
+                    <li>@Html.ActionLink("مدیریت کاربران", "Index", "Users")</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @if (!string.IsNullOrEmpty(TempData["Message"]?.ToString()))
+        {
+        <div class="row" style="margin-top:15px;">
+            @*<div class="col-md-12 alert alert-@(TempData["MessageClass"] == null ? "success" : TempData["MessageClass"])">*@
+            <div class="col-md-12 alert alert-@(TempData["MessageClass"]??"success")">
+                @TempData["Message"]
+            </div>
+        </div>
+        }
+
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - ملک جو</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/summernotejs")
+    @Scripts.Render("~/bundles/farsiToolkit")
+    @Scripts.Render("~/bundles/PersianDatePicker")
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+    <script>
+        $(function () {
+            $('.farsi-type').farsiInput();
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $('.select2').select2({
+                dir: "rtl",
+                theme: "bootstrap"
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $('.persian-date').MdPersianDateTimePicker({
+                Placement: 'bottom',
+                Trigger: 'click',
+                EnableTimePicker: false,
+                GroupId: '',
+                TargetSelector: '.persian-date',
+                ToDate: false,
+                FromDate: false,
+                DisableBeforeToday: true,
+                Disabled: false,
+                Format: 'yyyy/MM/dd',
+                IsGregorian: false,
+                EnglishNumber: true,
+                InLine: false
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $('.summernote').summernote();
+        });
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
