@@ -103,8 +103,17 @@ namespace PropMan.Controllers
             {
                 return HttpNotFound();
             }
-            //TODO: Generate View Model and Pass to view
-            return View();
+
+            var viewModel = new PropertyDetailsViewModel()
+            {
+                Id = property.Id,
+                Title = property.Title,
+                Description = property.Description,
+                MediaPaths = property.Medias
+                .Select(m => Url.Action("GetMedia", "Media", new { id = m.Id }))
+                .ToList()
+            };
+            return View(viewModel);
         }
 
 

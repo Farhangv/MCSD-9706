@@ -80,3 +80,7 @@
     border-radius:5px;
     margin:30px auto;
 }
+.carousel-control.left{
+    right:auto;
+    left:0;
+}
